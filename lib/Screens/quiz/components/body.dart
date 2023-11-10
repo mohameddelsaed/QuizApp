@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:quiz_app/Screens/quiz/components/question_card.dart';
 import 'package:quiz_app/constance.dart';
 import 'package:quiz_app/controller/question_controller.dart';
@@ -24,13 +23,13 @@ class Body extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
+              const Padding(
                 padding:  EdgeInsets.symmetric(horizontal: KDefaultPadding),
                 child: ProgressBar(),
               ),
-              SizedBox(height: KDefaultPadding,),
+              const SizedBox(height: KDefaultPadding,),
               Padding(
-                padding : EdgeInsets.symmetric(horizontal: KDefaultPadding),
+                padding : const EdgeInsets.symmetric(horizontal: KDefaultPadding),
                 child: Obx(()=>Text.rich(
                   TextSpan(
                     text: 'Question ${_questionController.questionNumber.value}',
@@ -46,11 +45,11 @@ class Body extends StatelessWidget {
                   ),
                 ),),
               ),
-              Divider(thickness: 1.5,),
-              SizedBox(height: KDefaultPadding,),
+              const Divider(thickness: 1.5,),
+              const SizedBox(height: KDefaultPadding,),
               Expanded(
                   child:  PageView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     onPageChanged: _questionController.updateTheQnNum,
                     controller: _questionController.pageController,
                     itemCount: _questionController.questions.length,
@@ -59,7 +58,7 @@ class Body extends StatelessWidget {
                       ),
                   ),
               ),
-              SizedBox(height: 50,),
+
             ],
           ),
         ),

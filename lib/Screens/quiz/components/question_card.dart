@@ -7,7 +7,7 @@ import '../../../models/Questions.dart';
 import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
-   QuestionCard({
+   const QuestionCard({
     super.key, required this.question,
   });
  final Question question;
@@ -18,8 +18,8 @@ class QuestionCard extends StatelessWidget {
   Widget build(BuildContext context) {
     QuestionController _controller =  Get.put(QuestionController());
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: KDefaultPadding),
-      padding: EdgeInsets.all(KDefaultPadding),
+      margin: const EdgeInsets.symmetric(horizontal: KDefaultPadding),
+      padding: const EdgeInsets.all(KDefaultPadding),
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(25),
@@ -29,7 +29,7 @@ class QuestionCard extends StatelessWidget {
           Text(question.question,
             style: Theme.of(context).textTheme.titleLarge!.copyWith(color: KBlackColor),
           ),
-          SizedBox(height: KDefaultPadding/2,),
+          const SizedBox(height: KDefaultPadding/2,),
        ...List.generate(
            question.options.length,
                (index) => Option(

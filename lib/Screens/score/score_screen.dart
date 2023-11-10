@@ -19,7 +19,7 @@ class ScoreScreen extends StatelessWidget {
               fit: BoxFit.fill,height: 1000),
           Column(
             children: [
-              Spacer(flex: 3,),
+              const Spacer(flex: 3,),
               Text(
                 "Score",
                 style: Theme.of(context)
@@ -27,7 +27,7 @@ class ScoreScreen extends StatelessWidget {
                     .displaySmall!
                     .copyWith(color: KSecondaryColor),
               ),
-              Spacer(),
+              const Spacer(),
               Text(
                 "${_qncontroller.correctAns*10}/${_qncontroller.questions.length*10}",
                 style: Theme.of(context)
@@ -35,7 +35,7 @@ class ScoreScreen extends StatelessWidget {
                     .headlineMedium!
                     .copyWith(color: KSecondaryColor),
               ),
-              Spacer(flex: 3,),
+              const Spacer(flex: 3,),
             ],
           ),
         ],

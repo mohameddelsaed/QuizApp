@@ -35,8 +35,8 @@ class Option extends StatelessWidget {
         return InkWell(
           onTap: press,
           child: Container(
-            margin: EdgeInsets.only(top: KDefaultPadding),
-            padding: EdgeInsets.all(KDefaultPadding),
+            margin: const EdgeInsets.only(top: KDefaultPadding),
+            padding: const EdgeInsets.all(KDefaultPadding),
             decoration: BoxDecoration(
               border: Border.all(color: getTheRightColor()),
               borderRadius: BorderRadius.circular(15),
@@ -46,7 +46,7 @@ class Option extends StatelessWidget {
               children: [
                 Text(
                   "${index + 1} $text ",
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: KGreyColor,
                     fontSize: 16,
                   ),

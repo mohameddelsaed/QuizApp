@@ -17,10 +17,10 @@ class QuizScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         actions: [
-          TextButton(onPressed: _controller.nextQuestion, child: Text('Skip',style: TextStyle(color: Colors.white),))
+          TextButton(onPressed: _controller.nextQuestion, child: const Text('Skip',style: TextStyle(color: Colors.white),))
         ],
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

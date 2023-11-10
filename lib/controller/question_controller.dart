@@ -1,8 +1,5 @@
 import 'dart:core';
-
-import 'package:flutter/animation.dart';
 import 'package:flutter/cupertino.dart';
-
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:quiz_app/Screens/score/score_screen.dart';
@@ -45,7 +42,7 @@ class QuestionController extends GetxController
   @override
   void onInit() {
     _animationController =
-        AnimationController(duration: Duration(seconds: 30), vsync: this);
+        AnimationController(duration: const Duration(seconds: 30), vsync: this);
     _animation = Tween<double>(begin: 0, end: 1).animate(_animationController!)
       ..addListener(() {
         update();
@@ -71,7 +68,7 @@ class QuestionController extends GetxController
     _animationController!.stop();
     update();
 
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 3), () {
     nextQuestion();
     });
   }
@@ -81,12 +78,12 @@ class QuestionController extends GetxController
     {
       _isAnswered = false;
       _pageController
-          ?.nextPage(duration: Duration(milliseconds: 250), curve: Curves.ease);
+          ?.nextPage(duration: const Duration(milliseconds: 250), curve: Curves.ease);
       _animationController!.reset();
       _animationController!.forward().whenComplete(nextQuestion);
     }
     else{
-      Get.to(ScoreScreen());
+      Get.to(const ScoreScreen());
     }
   }
 

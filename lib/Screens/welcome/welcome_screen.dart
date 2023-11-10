@@ -41,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                   const Spacer(),
                   InkWell(
-                    onTap: () => Get.to(QuizScreen()),
+                    onTap: () => Get.to(const QuizScreen()),
                     child: Container(
                       alignment: Alignment.center,
                       width: double.infinity,
